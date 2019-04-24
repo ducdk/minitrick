@@ -27,9 +27,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/main.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/main.js",
+              "src/assets/js/menu.js",
+              "src/assets/js/prism.js",
+              "src/assets/js/theme.js",
+            ]
           },
           "configurations": {
             "production": {
