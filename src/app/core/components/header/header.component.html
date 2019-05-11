@@ -2,29 +2,19 @@
   <span class="header__inner">
     <a href="#" style="text-decoration: none;">
       <div class="logo">
-        <!-- {{ if .Site.Params.Logo.path }} -->
-        <!-- <img src="#" alt="Logo" /> -->
-        <!-- {{ else }} -->
         <span class="logo__mark">></span>
         <span class="logo__text">
           Logo
-          <!-- {{ with .Site.Params.Logo.logoText }}{{ . }}{{ else }}hello{{ end }} -->
         </span>
         <span class="logo__cursor"></span>
-        <!-- {{ end }} -->
       </div>
     </a>
 
 
     <span class="header__right">
-      <!-- {{ if len .Site.Menus }} -->
-      <!-- {{ partial "menu.html" . }} -->
       <nav class="menu">
         <ul class="menu__inner">
-          <!-- {{- $currentPage := . -}} -->
-          <!-- {{ range .Site.Menus.main -}} -->
-          <li><a href="#">Menu</a></li>
-          <!-- {{- end }} -->
+          <li><a [routerLink]="['/blog/index']" [routerLinkActive]="'active'">Post</a></li>
         </ul>
       </nav>
 
@@ -34,7 +24,6 @@
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
         </svg>
       </span>
-      <!-- {{ end }} -->
 
       <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" style="cursor: pointer;"
         xmlns="http://www.w3.org/2000/svg" (click)="changeTheme()">

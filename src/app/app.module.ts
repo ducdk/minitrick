@@ -10,6 +10,8 @@ import { ConfigModule } from 'ngx-envconfig';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import { ApiModule } from './api/api.module';
+import { MarkdownModule } from 'ngx-markdown';
+import { FakeBackendProvider } from './fake/fake-backend-interceptor.provider';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,6 +27,7 @@ export function createTranslateLoader(http: HttpClient) {
     SharedModule,
     ApiModule,
     ConfigModule.forRoot(environment),
+    MarkdownModule.forRoot({ loader: HttpClient }),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
@@ -34,7 +37,9 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    FakeBackendProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

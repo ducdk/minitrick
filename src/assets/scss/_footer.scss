@@ -5,6 +5,11 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  background: #fafafa;
+
+  .dark-theme & {
+    background: #252627;
+  }
 
   &__inner {
     display: flex;

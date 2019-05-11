@@ -5,6 +5,8 @@
   justify-content: center;
   position: relative;
   padding: 20px;
+  position: sticky;
+  top: 0;
 
   .dark-theme & {
     background: #252627;

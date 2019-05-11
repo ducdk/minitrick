@@ -3,6 +3,7 @@ import { LayoutComponent } from './core/components/layout/layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { BlogsModule } from './modules/blogs/blogs.module';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => DashboardModule
       },
+      {
+        path: 'blog',
+        loadChildren: () => BlogsModule
+      },
     ]
   },
 ];
@@ -21,7 +26,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(
     routes,
     {
-      enableTracing: true,
+      // enableTracing: true,
       useHash: true
     }
   )],

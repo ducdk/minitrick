@@ -2,6 +2,7 @@ import { CoreModule } from './../core/core.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [],
@@ -11,7 +12,8 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   exports: [
     CoreModule,
-    TranslateModule
+    TranslateModule,
+    MarkdownModule
   ]
 })
 export class SharedModule { }
